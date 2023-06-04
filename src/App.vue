@@ -1,9 +1,13 @@
 <script setup>
 import Navbar from './components/Navbar.vue'
+import About from './components/About.vue'
+import Stack from './components/Stack.vue'
 </script>
 
 <template>
   <Navbar/>
+  <About/>
+  <Stack/>
 
 </template>
 

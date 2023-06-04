@@ -7,8 +7,8 @@
   const navbarOptions = [
     'home.',
     'stack.',
-    'work.',
     'experience.',
+    'work.',
     'contact.',
   ]
 
@@ -21,14 +21,15 @@
   <nav class="nav">
       <div class="navbar-background" :style="{ left: `-${ chosenOption  * 100 }%` }"/>
       <div class="navbar">
-        <p v-for="(option, idx) in navbarOptions" :key="idx" @click="chosenOption = idx">
+        <p 
+          class="nav-option"
+          v-for="(option, idx) in navbarOptions"
+          :key="idx"
+          @click="chosenOption = idx"
+          :class="{ active: chosenOption === idx }"
+        >
           {{ option }}
         </p>
-        <!-- <p class="nav-el">home.</p>
-        <p class="nav-el">stack.</p>
-        <p class="nav-el">work.</p>
-        <p class="nav-el">experience.</p>
-        <p class="nav-el">contact.</p> -->
       </div>
   </nav>
 </template>
@@ -36,8 +37,11 @@
 <style scoped lang="scss">
 
   .nav {
-    height: 50px;
+    height: 70px;
     overflow: hidden;
+    font-family: 'Space Grotesk', sans-serif;
+    position: sticky;
+    top: -67px;
   }
   .navbar-background {
     // background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
@@ -49,12 +53,11 @@
     height: 100%;
     width: 500%;
     position: absolute;
-    // left: -300%;
     transition: all 2s ease;
   }
 
   .navbar {
-    background: #151515;
+    background: #1a1a1a;
     color: white;
     width: 100%;
     height: calc(100% - 3px);
@@ -62,14 +65,24 @@
     align-items: center;
     padding: 0 20px;
     color: white;
-    mix-blend-mode: multiply;
+    mix-blend-mode: darken;
     display: flex;
     justify-content: center;
-    gap: 80px;
+    gap: 60px;
 
-    p {
-      font-weight: 600;
+    .nav-option {
+      font-weight: 500;
       cursor: pointer;
+      transition: all 0.2s ease-out;
+      // rotate: -10deg;
+      // transform: rotateY(1deg);
+
+      &.active {
+        margin: 5px 0 0;
+        // rotate: 0deg;
+        // transform: rotateY(360deg);
+
+      }
     }
 
   }
