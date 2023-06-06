@@ -1,13 +1,22 @@
 <script setup>
+import { ref, onMounted } from 'vue'
 import Navbar from './components/Navbar.vue'
 import About from './components/About.vue'
 import Stack from './components/Stack.vue'
+
+// const about = ref(null)
+
+// onMounted(() => {
+//   console.log('about', about.value)
+// })
+
+
 </script>
 
 <template>
-  <Navbar/>
-  <About/>
-  <Stack/>
+  <Navbar ref="navbar"/>
+  <About ref="about"/>
+  <Stack ref="stack"/>
 
 </template>
 

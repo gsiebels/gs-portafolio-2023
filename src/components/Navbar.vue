@@ -1,5 +1,5 @@
 <script setup>
-  import { ref, reactive, computed } from 'vue'
+  import { ref } from 'vue'
   defineProps({
     
   })
@@ -42,6 +42,7 @@
     font-family: 'Space Grotesk', sans-serif;
     position: sticky;
     top: -67px;
+    z-index: 10;
   }
   .navbar-background {
     // background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);

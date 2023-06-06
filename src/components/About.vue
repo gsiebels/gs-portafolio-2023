@@ -1,8 +1,21 @@
 <script setup>
+import { ref, onMounted } from 'vue'
+
+const about = ref(null)
+let aboutNode = ''
+
+onMounted(() => {
+  aboutNode = about.value.style
+
+  window.addEventListener('scroll', (e) => {
+    aboutNode.scale = 1 + (window.pageYOffset * 0.02)
+    // aboutNode.width = `${100 + (window.pageYOffset * 0.01)}%`
+  })
+})
 </script>
 
 <template>
-  <dir class="about-area">
+  <dir class="about-area" ref="about">
     <div class="name"> 
       gerardo 
       <div class="surname">s<div>i</div>ebels</div>
