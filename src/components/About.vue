@@ -6,10 +6,11 @@ let aboutNode = ''
 
 onMounted(() => {
   aboutNode = about.value.style
-
+  
+  
   window.addEventListener('scroll', (e) => {
-    aboutNode.scale = 1 + (window.pageYOffset * 0.02)
-    // aboutNode.width = `${100 + (window.pageYOffset * 0.01)}%`
+    const pageY = window.pageYOffset
+      aboutNode.scale = 1 + (pageY * (pageY * 0.001))
   })
 })
 </script>

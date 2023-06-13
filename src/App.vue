@@ -18,9 +18,14 @@ import Stack from './components/Stack.vue'
   <About ref="about"/>
   <Stack ref="stack"/>
 
+  <h1 class="text-3xl font-bold underline">
+    Hello world!
+  </h1>
+
 </template>
 
 <style scoped>
+
 header {
   line-height: 1.5;
 }
@@ -48,3 +53,4 @@ header {
   }
 }
 </style>
+
