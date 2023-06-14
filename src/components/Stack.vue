@@ -1,8 +1,5 @@
 <script setup>
-import { ref, onMounted } from 'vue'
-
-const stack = ref(null)
-const langList = [
+  const langList = [
   {
     name: 'HTML',
     img: 'logoHtml.svg',
@@ -40,72 +37,63 @@ const langList = [
   },
   
 ]
-let stackNode = ''
-
-onMounted(() => {
-  stackNode = stack.value.style
-
-  window.addEventListener('scroll', (e) => {
-    console.log(window.pageYOffset)
-    if (window.pageYOffset > 180) {
-      if (stackNode.scale <= 1) {
-        stackNode.scale = 0 + ((window.pageYOffset - 180) * 0.005)
-      }
-      if (stackNode.scale > 1) stackNode.scale = 1
-      stackNode.opacity = 1
-    } else {
-      stackNode.opacity = 0
-    }
-
-  })
-})
-
 </script>
 
 <template>
-  <div class="stack-area" ref="stack">
+  <div class="stack-area">
     <div class="stack-container" v-for="(lang, idx) in langList" :key="idx">
-      <img :src="`/src/assets/logos/${lang.img}`" :alt="`${lang.name} icon`">
-      <p>{{ lang.name }}</p>
-      <dir>{{ lang.level }}</dir>
-    </div>
+        <div class="logo-container">
+          <img class="lang-logo" :src="`/src/assets/logos/${lang.img}`" :alt="`${lang.name} icon`">
+        </div>
+        <p class="lang-name">{{ lang.name }}</p>
+        <dir class="lang-level">{{ lang.level }}</dir>
+      </div>
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style scoped lang="scss">
+
   .stack-area {
-    width: 100%;
-    height: 100vw;  
-    background: none;
-    position: absolute;
-    top: 10%;
-    opacity: 0;
     display: flex;
-    gap: 0 50px;
-    flex-wrap: wrap;
     justify-content: center;
-    padding: 100px 0;
+    flex-wrap: wrap;
+    height: max-content;
+    gap: 40px 10px;
   }
   .stack-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 25%;
+    width: 18%;
     height: 200px;
     gap: 10px;
 
-    .lang-icon {
-      width: 50%;
-      max-height: 100%;
-      height: 110px;
+    .logo-container {
       display: flex;
       justify-content: center;
       align-items: center;
-
-      svg {
-          max-height: 100%;
+      height: 100%;
+      .lang-logo {
+        width: 50%;
+        max-height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     }
+  }
+
+  .lang-name {
+    color: white;
+  }
+
+  .lang-level {
+    display: flex;
+    padding: 0;
+    background: #373737;
+    border: 2px solid #868686;
+    width: 100px;
+    border-radius: 15px;
   }
 </style>

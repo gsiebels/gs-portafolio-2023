@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-#app {
-  background-color: black;
+html {
+  background-color: rgb(19, 19, 19);
+  overflow-x: hidden;
 }

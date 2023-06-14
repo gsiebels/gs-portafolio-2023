@@ -2,7 +2,7 @@
 import { ref, onMounted } from 'vue'
 import Navbar from './components/Navbar.vue'
 import About from './components/About.vue'
-import Stack from './components/Stack.vue'
+import ScrollArea from './components/ScrollArea.vue'
 
 // const about = ref(null)
 
@@ -16,11 +16,7 @@ import Stack from './components/Stack.vue'
 <template>
   <Navbar ref="navbar"/>
   <About ref="about"/>
-  <Stack ref="stack"/>
-
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+  <ScrollArea ref="scrollArea"/>
 
 </template>
 

@@ -10,7 +10,7 @@ onMounted(() => {
   
   window.addEventListener('scroll', (e) => {
     const pageY = window.pageYOffset
-      aboutNode.scale = 1 + (pageY * (pageY * 0.001))
+      aboutNode.scale = 1 + (pageY * (pageY * 0.0002))
   })
 })
 </script>
@@ -40,6 +40,7 @@ onMounted(() => {
     color: white;
     position: sticky;
     top: 70px;
+    padding: 0;
 
     .name {
       font-size: 110px;
