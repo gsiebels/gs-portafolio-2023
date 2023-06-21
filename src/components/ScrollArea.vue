@@ -28,18 +28,27 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="acroll-area" ref="scrollArea">
-    <Stack/>
+  <div class="scroll-container">
+
+    <div class="scroll-area" ref="scrollArea">
+      <Stack/>
+    </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
-  .acroll-area {
+
+  .scroll-container {
+    height: 100vh;
+    width: 100%;
+    position: sticky;
+    top: 0px;
+  }
+  .scroll-area {
     width: 100%;
     height: 100vw;  
     background: none;
     position: absolute;
-    top: 100%;
     opacity: 0;
     display: flex;
     gap: 0 50px;
