@@ -16,31 +16,43 @@ onMounted(() => {
 </script>
 
 <template>
-  <dir class="about-area" ref="about">
-    <div class="name"> 
-      gerardo 
-      <div class="surname">s<div>i</div>ebels</div>
-    </div>
-
-    <div class="description">
-      Full Stack Software Engineer 
-    </div>
-
-
-  </dir>
+  <div class="about-container">
+    <dir class="about-area" ref="about">
+      <div class="name"> 
+        gerardo 
+        <div class="surname">s<div>i</div>ebels</div>
+      </div>
+      
+      <div class="description">
+        Full Stack Software Engineer 
+      </div>
+    </dir>
+  </div>
 </template>
 
 <style scoped lang="scss">
+
+  .about-container {
+    overflow: hidden;
+    top: 0;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    overflow: visible;
+
+  }
   .about-area {
-    height: calc(100vh - 70px);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     color: white;
     position: sticky;
-    top: 70px;
     padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    padding: 150px 0 0;
 
     .name {
       font-size: 110px;
