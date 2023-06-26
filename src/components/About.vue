@@ -34,11 +34,10 @@ onMounted(() => {
 
   .about-container {
     overflow: hidden;
-    top: 0;
-    position: absolute;
     height: 100vh;
     width: 100%;
-    overflow: visible;
+    position: sticky;
+    top: 70px;
 
   }
   .about-area {
@@ -52,7 +51,7 @@ onMounted(() => {
     margin: 0;
     height: 100%;
     width: 100%;
-    padding: 150px 0 0;
+    
 
     .name {
       font-size: 110px;
