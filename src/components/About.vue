@@ -8,10 +8,10 @@ onMounted(() => {
   aboutNode = about.value.style
   
   
-  window.addEventListener('scroll', (e) => {
-    const pageY = window.pageYOffset
-      aboutNode.scale = 1 + (pageY * (pageY * 0.0002))
-  })
+  // window.addEventListener('scroll', (e) => {
+  //   const pageY = window.pageYOffset
+  //     aboutNode.scale = 1 + (pageY * (pageY * 0.0002))
+  // })
 })
 </script>
 

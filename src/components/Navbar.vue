@@ -26,8 +26,8 @@
           v-for="(option, idx) in navbarOptions"
           :key="idx"
           @click="chosenOption = idx"
-          :class="{ active: chosenOption === idx }"
-        >
+          :class="[option, { active: chosenOption === idx }]"
+          >
           {{ option }}
         </p>
       </div>
