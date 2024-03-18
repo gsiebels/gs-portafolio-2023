@@ -41,7 +41,7 @@
     overflow: hidden;
     font-family: 'Space Grotesk', sans-serif;
     position: sticky;
-    top: -67px;
+    top: 0px;
     z-index: 10;
   }
   .navbar-background {
@@ -60,7 +60,7 @@
   }
 
   .navbar {
-    background: #1a1a1a;
+    background: #1d152a;
     color: white;
     width: 100%;
     height: calc(100% - 3px);

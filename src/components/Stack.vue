@@ -58,7 +58,7 @@
 </script>
 
 <template>
-  <div class="title">stack.</div>
+  <!-- <div class="title">stack.</div> -->
   <div class="stack-area">
     <div class="stack-container" v-for="(lang, idx) in langList" :key="idx">
         <div class="logo-container">
@@ -86,7 +86,13 @@
     flex-wrap: wrap;
     height: max-content;
     gap: 40px 10px;
-    margin: 30px 0;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    gap: 40px 10px;
+    height: calc(100vh - 67px);
   }
   .stack-container {
     display: flex;

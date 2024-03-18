@@ -38,6 +38,7 @@ onMounted(() => {
     width: 100%;
     position: sticky;
     top: 70px;
+    background: #18152a;
 
   }
   .about-area {
@@ -64,6 +65,7 @@ onMounted(() => {
       .surname {
         margin: 0 0 0 172px;
         display: flex;
+        color: #bcde06;
         
         div {
           rotate: 180deg;

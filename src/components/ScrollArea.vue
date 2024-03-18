@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import Stack from './Stack.vue'
+import Experience from './Experience.vue'
 
 const scrollArea = ref(null)
 const scrollContainer = ref(null)
@@ -18,7 +19,7 @@ onMounted(() => {
     console.log(pageY)
     if (pageY > spanStart) {
       if (scrollAreaNode.scale <= 1) {
-        scrollAreaNode.scale = 0 + ((pageY - spanStart) * 0.004)
+        scrollAreaNode.scale = 0 + ((pageY - spanStart) * 0.0025)
       }
       if (scrollAreaNode.scale > 1) scrollAreaNode.scale = 1
       // scrollAreaNode.opacity = 1
@@ -41,7 +42,7 @@ onMounted(() => {
   <div class="scroll-container" ref="scrollContainer">
     <div class="scroll-area" ref="scrollArea">
       <Stack/>
-      <div class="test">test</div>
+      <Experience />
     </div>
   </div>
 </template>
@@ -49,15 +50,12 @@ onMounted(() => {
 <style lang="scss" scoped>
 
   .scroll-container {
-    height: 100vh;
+    height: inherit;
     width: 100%;
-    // position: sticky;
     top: 0px;
     background: #30303029;
     backdrop-filter: blur(10px);
-    border: 2px solid #10de980f;
-    border-radius: 7px;
-    box-shadow: 0px -1px 7px 7px #10de980f;
+    border-top: 2px solid rgba(16, 222, 152, 0.0588235294);
   }
 
   .scroll-area {
@@ -65,11 +63,9 @@ onMounted(() => {
     height: 100vw;  
     background: none;
     position: absolute;
-    // opacity: 0;
     display: flex;
     gap: 0 50px;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 100px 0;
   }
 </style>
