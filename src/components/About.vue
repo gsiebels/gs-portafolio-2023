@@ -65,7 +65,7 @@ onMounted(() => {
       .surname {
         margin: 0 0 0 172px;
         display: flex;
-        color: #bcde06;
+        color: #0bdd90;
         
         div {
           rotate: 180deg;
